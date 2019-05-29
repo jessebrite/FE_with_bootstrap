@@ -51,3 +51,48 @@ section#features .feature {
 	padding-bottom: 4rem;
 	text-align: center;
 }
+section#pricing thead .table-success,
+ section#pricing tbody .table-success {
+	background-color: forestgreen;
+}
+section#pricing thead .table-success:hover,
+ section#pricing tbody .table-success:hover {
+	background-color: green;
+}
+section#pricing thead .table-info,
+section#pricing tbody .table-info {
+	background-color: darkcyan;
+}
+section#pricing thead .table-info:hover,
+section#pricing tbody .table-info:hover {
+	background-color: teal;
+}
+section#pricing thead .table-danger,
+section#pricing tbody .table-danger {
+	background-color: crimson;
+}
+section#pricing thead .table-danger:hover,
+section#pricing tbody .table-danger:hover {
+	background-color: rgb(200  30  60);
+}
+footer {
+	background-color: #191919;
+	color: #ADADAD;
+	margin-top: 3em;
+}
+footer h5, footer img {
+	margin-top: 5em;
+	font-weight: bold;
+}
+footer a {
+	color: #ADADAD;
+}
+footer address {
+	margin: 6em ;
+	color: #5A5A5A;
+}
+footer address strong {
+	color: #ADADAD;
+	display: block;
+	padding-bottom: 0.52em;
+}
