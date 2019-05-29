@@ -10,7 +10,8 @@ header a, header li {
 	font-weight: bold;
 }
 section#intro-header {
-	background-image: url(../images/landscape.jpg);
+	/*background-image: url(../images/landscape.jpg);*/
+	background-color: grey;
 	background-size: cover;
 }
 section#intro-header .wrap-headline {
