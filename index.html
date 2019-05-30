@@ -7,12 +7,17 @@
 	<title>Hello World</title>
 	<!-- Insert CSS link here -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+
 	<link rel="stylesheet" href="css/base.css">
-	<!-- The bootstrapCDN link is commented below. Could be used alternatively -->
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+	<!-- jQuery MUST be loaded first for bootstrap to work properly -->
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+
 	<!-- The fontawesomeCDN -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<!--[if lt IE 9]>
+
+<!-- For browsers < IE 9 compatibility -->
+<!--[if lt IE 9]>
 <script
 src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -20,19 +25,28 @@ src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 </head>
 <body>
 	<!-- row 1 -->
-	<header>
-		<div class="container-fluid">
-			<div class="row">
-				<a href="#" class=" mr-auto ">Company name</a>
-				<ul class="list-inline ml-auto">
-					<li class="list-inline-item "><a href="#">About</a></li>
-					<li class="list-inline-item"><a href="#">Features</a></li>
-					<li class="list-inline-item"><a href="#">Prices</a></li>
-					<li class="list-inline-item "><a href="#">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-	</header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">Company</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-item nav-link" href="#">About</a>
+	      <a class="nav-item nav-link" href="#">Features</a>
+	      <a class="nav-item nav-link" href="#">Pricing</a>
+	      <a class="nav-item nav-link" href="#">Contact</a>
+	       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+	    </div>
+	  </div>
+	</nav>
 
 	<section id="intro-header">
 		<div class="container-fluid">
@@ -59,7 +73,7 @@ src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 							<div class="form-group">
 								<div class="input-group">
 									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1">*</span>
+										<span class="input-group-text" id="basic-addon2">*</span>
 									</div>
 									<input id="password" class="form-control" placeholder="password">
 								</div>
@@ -114,29 +128,47 @@ src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<div class="row">
 				<div class="col-sm-12 ">
 					<h3 class="text-center">Features</h3>
-					<p class="text-center">Features here</p>
+					<p class="text-center">Features headline message</p>
 				</div>
 			</div>
 
 		<!-- row 6 -->
 			<div class="row">
 				<div class="col-sm-2 col-md-4">
-					<div class="feature">Feature</div>
+					<div class="feature">
+						<span class="far fa-flag fa-2x"></span>
+						<span class="feature-tag">Product focus</span>
+					</div>
 				</div>
 				<div class="col-sm-2 col-md-4">
-					<div class="feature">Feature</div>
+					<div class="feature">
+						<span class="fas fa-user-graduate fa-2x"></span>
+						<span class="feature-tag">Teaching as a passion!</span>
+					</div>
 				</div>
 				<div class="col-sm-2 col-md-4">
-					<div class="feature">Feature</div>
+					<div class="feature">
+						<span class="far fa-hourglass fa-2x"></span>
+						<span class="feature-tag">Racing against time</span>
+					</div>
 				</div>
 				<div class="col-sm-2 col-md-4">
-					<div class="feature">Feature</div>
+					<div class="feature">
+						<span class="fas fa-glasses fa-2x"></span>
+						<span class="feature-tag">Keeping watch</span>
+					</div>
 				</div>
 				<div class="col-sm-2 col-md-4">
-					<div class="feature">Feature</div>
+					<div class="feature">
+						<span class="far fa-paper-plane fa-2x"></span>
+						<span class="feature-tag">Sreading knowledge</span>
+					</div>
 				</div>
 				<div class="col-sm-2 col-md-4">
-					<div class="feature">Feature</div>
+					<div class="feature">
+						<span class="far fa-heart fa-2x"></span>
+						<span class="feature-tag">Made with love</span>
+					</div>
 				</div>		
 		</div>
 	</section>
@@ -205,14 +237,40 @@ src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		</div>
 	</section>
 
+	<section id="team">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<ul class="list-inline text-center">
+						<li class="list-inline-item">
+							<img src="images/jon.png" class="rounded-circle">
+							<h5>Sean Jo</h5>
+							<p>CEO</p>
+						</li>
+						<li class="list-inline-item">
+							<img src="images/jon.png" class="rounded">
+							<h5>Steve Li</h5>
+							<p>CTO</p>
+						</li>
+						<li class="list-inline-item">
+							<img src="images/jon.png" class="thumbnail">
+							<h5>Sean Jo</h5>
+							<p>COO</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section id="newsletter" class="text-center">
 		<h4>Stay connected with us. Join the newsletter to receive fresh info</h4>
 		<form method="post" class="form-inline justify-content-center">
 			<div class="form-group">
-				<input class="form-control" placeholder="Your name">
+				<input class="form-control" id="name" placeholder="Your name">
 			</div>
 			<div class="form-group">
-				<input class="form-control" placeholder="Your email">
+				<input class="form-control" id="email" placeholder="Your email">
 			</div>
 			<button type="submit" class="btn btn-primary"> Join us now</button>
 		</form>
@@ -265,7 +323,6 @@ src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	</footer>
 
 	<!-- Insert Bootstrapand/or an other JS link here -->
-	<script src="js/bootstrap.js"></script>
-	<script src="js/jquery-3.4.1.js"></script>
+
 </body>
 </html>

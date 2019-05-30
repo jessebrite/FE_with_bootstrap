@@ -1,13 +1,11 @@
-header {
-	background-color: #F8F8F8;
+nav li {
+	padding: 10px;
 }
-header ul {
-	margin: 0;
+nav a {
+	color: dimgrey;
 }
-header a, header li {
-	padding: 1.6rem 0;
-	color: #777;
-	font-weight: bold;
+nav a:hover {
+	color: grey;
 }
 section#intro-header {
 	background-color: grey;
@@ -31,6 +29,19 @@ section#intro-header hr {
 section#intro-header .btn-default {
 	background-color: rgba(255, 255, 255, 0.5);
 	border: none;
+}
+section#intro-header input#email,
+section#intro-header input#password {
+	max-width: 750px;
+	margin: auto;
+}
+section#intro-header input#email {
+	margin-right: 5px;
+}
+section#intro-header button {
+	width: 120px;
+	margin: 5px;
+	padding-top: 5px;
 }
 .container-fluid {
 	padding: 0 3% 0 3%;
@@ -89,21 +100,39 @@ section#newsletter form {
 	padding: 0.7em;
 	margin: 1em 0 2.5em 0;
 }
-section#intro-header input#email {
-	margin-right: 5px;
+section#newsletter input#name,
+section#newsletter input#email {
+	max-width: 750px;
+	margin: 0 5px 0 5px;
 }
-section#intro-header button {
-	margin: 5px;
+section#newsletter button {
+	max-width: 120px;
+	margin: 0 5px 0 5px;
 }
 section#contact {
 	background-color: #eef2f5;
 	border-top: 1px solid #E0E0E0;
 	padding: 1em 0 1em 0;
 }
+section#team ul {
+	margin: 5rem 0;
+}
+section#team li {
+	margin: 0 5rem;
+}
+section#team h5 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+section#features .feature-tag {
+	max-width: 10.7em;
+	padding: 0 1rem 0 1rem;
+	text-align: left;
+	font-size: 1.7rem;
+}
 footer {
 	background-color: #191919;
 	color: #ADADAD;
-	/*margin-top: 1em;*/
 }
 footer h5, footer img {
 	margin-top: 5em;
